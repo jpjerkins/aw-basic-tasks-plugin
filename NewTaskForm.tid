@@ -1,0 +1,16 @@
+created: 20240416004153335
+creator: jpjerkins
+modified: 20240416004153335
+creator: jpjerkins
+title: $:/plugins/pjerkins/aw-basic-tasks/NewTaskForm
+
+<$edit-text tiddler="$:/temp/new-task-title" tag="input" default="" />
+
+<$button>
+    <$list filter="[title[$:/temp/new-task-title]get[text]compare:string:ne[]]" variable=_>
+        <$action-createtiddler $basetitle={{$:/temp/new-task-title}} $savetitle="$:/temp/new-task-title" />
+        <$action-listops $tiddler={{$:/temp/new-task-title}} $field="tags" $subfilter="[[Task]]" />
+        <$action-deletetiddler $tiddler="$:/temp/new-task-title" />
+    </$list>
+    Create
+</$button>
