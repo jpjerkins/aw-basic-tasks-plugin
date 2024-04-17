@@ -2,9 +2,8 @@ created: 20240416230950577
 creator: jpjerkins
 modified: 20240416230950577
 creator: jpjerkins
-tags: template $:/tags/ViewTemplate TaskHeaderToolbarControl
+tags: TaskHeaderToolbarControl
 title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneButtonTemplate
-list-before: $:/core/ui/ViewTemplate/body
 
 <$list filter="[is[current]!tag[Done]]">
     <$button>

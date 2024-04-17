@@ -7,9 +7,7 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskHeader
 list-before: $:/core/ui/ViewTemplate/body
 
 <$list filter="[is[current]tag[Task]]">
-
-    <$list filter="[tag[TaskHeaderToolbarControl]]" variable=template>
-        <$transclude field=<<template>> />
+    <$list filter="[all[shadows+tiddlers]tag[TaskHeaderToolbarControl]]" variable=template>
+        <$transclude tiddler=<<template>> />
     </$list>
-
 </$list>
