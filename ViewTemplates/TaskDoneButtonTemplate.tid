@@ -5,11 +5,18 @@ creator: jpjerkins
 tags: TaskHeaderToolbarControl
 title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneButtonTemplate
 
+\define otherTaskDoneActions()
+{{$:/temp/TaskDoneActions!!text}}
+\end
+
 <$list filter="[is[current]!tag[Done]]">
-    <$button>
-        <$action-listops $tiddler=<<currentTiddler>> $field="tags" $subfilter="+[append[Done]]" />
-        Done!
-    </$button>
+    <$vars doneTiddler=<<currentTiddler>>>
+        <$button>
+            <$action-listops $tiddler=<<currentTiddler>> $field="tags" $subfilter="+[append[Done]]" />
+            <<otherTaskDoneActions>>
+            Done!
+        </$button>
+    </$vars>
 </$list>
 <$list filter="[is[current]tag[Done]]">
     <$button>
