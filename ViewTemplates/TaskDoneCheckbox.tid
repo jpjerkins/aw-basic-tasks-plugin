@@ -10,4 +10,4 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckbox
 
 <$checkbox tiddler=<<targetTask>> filter=`[list[$(targetTask)$!!tags]]` checked="Done" checkactions=<<allTaskDoneActions>> uncheckactions=<<allTaskNotDoneActions>> >
     <$link to=<<targetTask>> ><<targetTask>></$link>
-</$checkbox><br/>
+</$checkbox>
