@@ -8,14 +8,4 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckbox
 \import [[$:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskDoneActionsMacro]]
 \import [[$:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskNotDoneActionsMacro]]
 
-<% if [<targetTask>!tag[Done]] %>
-    <$button>
-        <<allTaskDoneActions>>
-        &#10003;
-    </$button>
-<% else %>
-    <$button>
-        <<allTaskNotDoneActions>>
-        &#8856;
-    </$button>
-<% endif %>
+<$checkbox tiddler=<<targetTask>> filter=`[list[$(targetTask)$!!tags]]` checked="Done" checkactions=<<allTaskDoneActions>> uncheckactions=<<allTaskNotDoneActions>> />
