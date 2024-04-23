@@ -1,0 +1,14 @@
+created: 20240423184715494
+modified: 20240423184736177
+tags: 
+title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar
+
+<$reveal state=`$:/temp/${[<targetTask>]}$/action-menu-state` type="match" text="prompt-for-task-action">
+    <$vars targetTask=<<currentTiddler>>>
+        <div>
+            <$list filter="[all[shadows+tiddlers]tag[TaskActionBarControl]]" variable=template>
+                <$transclude tiddler=<<template>> />
+            </$list>
+        </div>
+    </$vars>
+</$reveal>
