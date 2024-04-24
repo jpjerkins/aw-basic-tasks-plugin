@@ -3,7 +3,7 @@ modified: 20240423184541968
 tags: 
 title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot
 
-<$let actionMenuState=`$:/temp/${[<targetTask>]}$/action-menu-state` >
+<$let actionMenuState=`$:/temp/${[<currentTiddler>]}$/action-menu-state` >
 	<$reveal state=<<actionMenuState>> type="nomatch" text="prompt-for-task-action">
 		<$button set=<<actionMenuState>> setTo="prompt-for-task-action">
 			&#8942;

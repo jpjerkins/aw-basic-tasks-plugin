@@ -8,10 +8,10 @@ title: $:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskNotDoneActionsMacro
 \define allTaskNotDoneActions()
 
 <$action-listops
- $tiddler=<<targetTask>>
+ $tiddler=<<currentTiddler>>
  $tags="-Done"
 />
 
-{{$:/temp/TaskNotDoneActions!!text}}
+{{||$:/temp/TaskNotDoneActions}}
 
 \end

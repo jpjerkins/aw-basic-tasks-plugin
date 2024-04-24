@@ -8,16 +8,14 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneButtonTemplate
 \import [[$:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskDoneActionsMacro]]
 \import [[$:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskNotDoneActionsMacro]]
 
-<$vars targetTask=<<currentTiddler>> >
-    <% if [is[current]!tag[Done]] %>
-        <$button>
-            <<allTaskDoneActions>>
-            Done!
-        </$button>
-    <% else %>
-        <$button>
-            <<allTaskNotDoneActions>>
-            !Done
-        </$button>
-    <% endif %>
-</$vars>
+<% if [is[current]!tag[Done]] %>
+    <$button>
+        <<allTaskDoneActions>>
+        Done!
+    </$button>
+<% else %>
+    <$button>
+        <<allTaskNotDoneActions>>
+        !Done
+    </$button>
+<% endif %>

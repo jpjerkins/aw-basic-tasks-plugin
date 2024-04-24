@@ -8,7 +8,7 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckButton
 \import [[$:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskDoneActionsMacro]]
 \import [[$:/plugins/pjerkins/aw-basic-tasks/Macros/AllTaskNotDoneActionsMacro]]
 
-<% if [<targetTask>!tag[Done]] %>
+<% if [<currentTiddler>!tag[Done]] %>
     <$button>
         <<allTaskDoneActions>>
         &#10003;
