@@ -8,7 +8,9 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot
 \end
 
 \define closeActionBarActions()
-<$action-deletetiddler $tiddler=<<actionMenuState>> />
+<$let actionMenuState=`$:/temp/${[<currentTiddler>]}$/action-menu-state` >
+	<$action-deletetiddler $tiddler=<<actionMenuState>> />
+</$let>
 \end
 
 <$let actionMenuState=`$:/temp/${[<currentTiddler>]}$/action-menu-state` >
