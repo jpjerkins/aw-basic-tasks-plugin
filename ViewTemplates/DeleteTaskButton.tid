@@ -1,0 +1,13 @@
+created: 20240424174804176
+modified: 20240424175233834
+tags: TaskActionBarControl
+title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/DeleteTaskButton
+type: text/vnd.tiddlywiki
+list-after: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckButton
+
+<$button>
+    <$action-confirm $message=`Are you sure you want to delete $(currentTiddler)$?`>
+        <$action-deletetiddler $tiddler=<<currentTiddler>> />
+    </$action-confirm>
+    &#x1f5d1;
+</$button>
