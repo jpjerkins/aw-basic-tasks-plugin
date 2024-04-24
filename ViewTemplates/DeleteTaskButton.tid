@@ -5,9 +5,12 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/DeleteTaskButton
 type: text/vnd.tiddlywiki
 list-after: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckButton
 
+\import [[$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot]]
+
 <$button>
     <$action-confirm $message=`Are you sure you want to delete $(currentTiddler)$?`>
         <$action-deletetiddler $tiddler=<<currentTiddler>> />
     </$action-confirm>
+    <<closeActionBarActions>>
     &#x1f5d1;
 </$button>
