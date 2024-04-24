@@ -3,15 +3,23 @@ modified: 20240423184541968
 tags: 
 title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot
 
+\define openActionBarActions()
+<$action-setfield $tiddler=<<actionMenuState>> $value="prompt-for-task-action" />
+\end
+
+\define closeActionBarActions()
+<$action-deletetiddler $tiddler=<<actionMenuState>> />
+\end
+
 <$let actionMenuState=`$:/temp/${[<currentTiddler>]}$/action-menu-state` >
 	<$reveal state=<<actionMenuState>> type="nomatch" text="prompt-for-task-action">
-		<$button set=<<actionMenuState>> setTo="prompt-for-task-action">
-			&#8942;
-		</$button>
+		<$messagecatcher $tm-navigate=<<openActionBarActions>> >
+			<$link style.width="2em;">&#8942;</$link>
+		</$messagecatcher>
 	</$reveal>
 	<$reveal state=<<actionMenuState>> type="match" text="prompt-for-task-action">
-		<$button set=<<actionMenuState>> setTo="">
-			&times;
-		</$button> |
+		<$messagecatcher $tm-navigate=<<closeActionBarActions>> >
+			<$link style.width="2em;">&times;</$link>
+		</$messagecatcher>
 	</$reveal>
 </$let>
