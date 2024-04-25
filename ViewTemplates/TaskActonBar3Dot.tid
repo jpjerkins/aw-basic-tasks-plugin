@@ -17,14 +17,14 @@ title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot
 	<$reveal state=<<actionMenuState>> type="nomatch" text="prompt-for-task-action">
 		<$messagecatcher $tm-navigate=<<openActionBarActions>> >
 			<$link>
-				<span style="width: 2em;">&#8942;</span>
+				<span style="width: 2em; font-weight: bold;">&#8942;</span>
 			</$link>
 		</$messagecatcher>
 	</$reveal>
 	<$reveal state=<<actionMenuState>> type="match" text="prompt-for-task-action">
 		<$messagecatcher $tm-navigate=<<closeActionBarActions>> >
 			<$link>
-				<span style="width: 2em;">&times;</span>
+				<span style="width: 2em; font-weight: bold;">&times;</span>
 			</$link>
 		</$messagecatcher>
 	</$reveal>
