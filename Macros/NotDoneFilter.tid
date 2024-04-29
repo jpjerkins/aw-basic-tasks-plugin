@@ -1,0 +1,7 @@
+created: 20240429003122178
+modified: 20240429003242295
+tags: DefaultTaskExclusionFilter BasicTasks
+title: $:/plugins/pjerkins/aw-basic-tasks/Macros/NotDoneFilter
+type: text/vnd.tiddlywiki
+
+!tag[Done]
