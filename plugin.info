@@ -1,12 +1,12 @@
 {
-    "created": "20240414042254762",
-    "title": "$:/plugins/pjerkins/aw-basic-tasks",
-    "modified": "20240414042254762",
-    "core.version": ">=5.3.3",
-    "description": "ArchWork Basic Tasks plugin",
-    "plugin-type": "plugin",
-    "version": "0.0.07",
-    "name": "aw-basic-tasks",
-    "dependents": "[[$:/plugins/pjerkins/aw-basic-tasks]] [[$:/plugins/pjerkins/aw-basic-tasks/Home]]",
-    "list": "readme"
+  "created": "20240414042254762",
+  "title": "$:/plugins/pjerkins/aw-basic-tasks",
+  "modified": "20240414042254762",
+  "core.version": ">=5.3.3",
+  "description": "ArchWork Basic Tasks plugin",
+  "plugin-type": "plugin",
+  "version": "0.0.09",
+  "name": "aw-basic-tasks",
+  "dependents": "[[$:/plugins/pjerkins/aw-basic-tasks]] [[$:/plugins/pjerkins/aw-basic-tasks/Home]]",
+  "list": "readme"
 }
