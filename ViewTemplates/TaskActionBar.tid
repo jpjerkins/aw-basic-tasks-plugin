@@ -3,10 +3,6 @@ modified: 20240423184736177
 tags: 
 title: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar
 
-<$reveal state=`$:/temp/${[<currentTiddler>]}$/action-menu-state` type="match" text="prompt-for-task-action">
-    <div>
-        <$list filter="[all[shadows+tiddlers]tag[TaskActionBarControl]]" variable=template>
-            <$transclude tiddler=<<template>> />
-        </$list>
-    </div>
-</$reveal>
+\import [[$:/plugins/pjerkins/aw-ui-controls/Macros/ActionBarMacros]]
+
+<<actionBar "TaskActionBarControl">>
